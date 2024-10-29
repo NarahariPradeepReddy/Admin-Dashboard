@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Dashboard from './Dashboard';
+import { AppBar, Container, Toolbar, Typography } from '@mui/material'
+import Footer from './Footer'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <AppBar position='sticky'>
+      <Toolbar>
+        <Typography variant='h6' align='center' sx={{flexGrow: 1}}> Admin User Dashboard</Typography>
+      </Toolbar>
+    </AppBar>
+    <Container style={{marginTop: '20px', textAlign: 'center'}}>
+      <Dashboard />
+    </Container>
+    <Footer />
+    </>
   );
 }
 
